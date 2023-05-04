@@ -14,7 +14,7 @@ function BotsPage() {
   }, [botsCollection])
 
   const fetchBots = () => {
-    const api = 'http://localhost:8001/bots'
+    const api = 'http://localhost:3000/bots'
     fetch(api)
       .then((response) => response.json())
       .then((data) => {
@@ -42,7 +42,7 @@ function BotsPage() {
   }
 
   function dischargeBot(bot) {
-    const botApi = `http://localhost:8001/bots/${bot}`
+    const botApi = `http://localhost:3000/bots/${bot}`
     fetch(botApi, {
       method: "DELETE",
       headers: {
